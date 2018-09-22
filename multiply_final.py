@@ -1,4 +1,4 @@
- import timeit, random
+import timeit, random
 
 class Solution:
     def __init__(self, bits):
