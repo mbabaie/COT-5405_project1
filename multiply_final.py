@@ -3,8 +3,8 @@ import timeit, random
 class Solution:
     def __init__(self, bits):
         self.bits = bits
-        self.MAX_INT = int(pow(2, self.bits*2)/2)-1
-        self.MIN_INT = int(pow(2, self.bits*2)/2)
+        self.MAX_INT = int(pow(2, self.bits*2)//2)-1
+        self.MIN_INT = int(pow(2, self.bits*2)//2)
         self.MASK = pow(2, bits*2)
 
     def generateRandomNum(self):
@@ -79,7 +79,7 @@ result = [0 for x in range(1000)]
 
 '''
 
-bitSizeArray = [4, 8, 16, 32, 64, 128, 256, 512]
+bitSizeArray = [4, 8, 16, 32, 64, 128, 256, 512, 1024]
 
 for j, bitSize in enumerate(bitSizeArray):
     time = timeit.timeit(setup=SETUP_CODE.replace("***", str(bitSize)), stmt=TEST_CODE, number=1)
